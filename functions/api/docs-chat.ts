@@ -96,12 +96,12 @@ const maxOutputTokens = (value: string | undefined) => {
 }
 
 const textFromMessage = (message?: UIMessage) =>
-  message.parts
+  message?.parts
     ?.map(part => (part.type === 'text' ? part.text : ''))
     .join('') || ''
 
 const lastUserText = (messages: UIMessage[]) =>
-  textFromMessage([...messages].reverse().find(message => message.role === 'user'))
+  textFromMessage([...messages].reverse().find(message => message?.role === 'user'))
 
 export const onRequestOptions = ({ request, env }: PagesContext) =>
   new Response(null, {
