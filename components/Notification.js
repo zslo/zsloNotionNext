@@ -38,18 +38,19 @@ const useNotification = () => {
    */
   const Notification = () => {
     return (
-      <div className={`notification fixed left-0 w-full px-2 z-20 bottom-14`}>
-        <div
-          className={` ${isVisible && message ? 'opacity-100 ' : 'invisible opacity-0 bottom-0'} transition-opacity duration-200 
-           max-w-3xl mx-auto bg-green-500 flex items-center justify-between px-4 py-2 text-white rounded-lg shadow-lg`}>
-          {message}
-          <button
-            onClick={closeNotification}
-            className='ml-4 p-2 cursor-pointer bg-transparent text-white border-none'>
-            <i className='fas fa-times' />
-          </button>
-        </div>
-      </div>
+      <div className='notification fixed inset-x-0 bottom-16 z-20 flex justify-center pointer-events-none'>
+  <div
+    className={`${
+      isVisible && message
+        ? 'visible opacity-100 translate-y-0'
+        : 'invisible opacity-0 translate-y-2'
+    } transition-all duration-500
+    px-6 py-3 bg-black/70 text-white text-center
+    rounded-full shadow-lg backdrop-blur-sm`}
+  >
+    {message}
+  </div>
+</div>
     )
   }
 
