@@ -85,7 +85,10 @@ const Hero = props => {
             {siteConfig('HEXO_SHOW_START_READING', null, CONFIG) &&
               locale.COMMON.START_READING}
           </div>
-          <i className='opacity-70 animate-bounce fas fa-angle-down' />
+         <i
+  className='opacity-70 animate-bounce fas fa-angle-down'
+  style={{ animationDuration: '3s' }}
+/>
         </div>
       </div>
 
