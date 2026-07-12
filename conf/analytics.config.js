@@ -1,4 +1,4 @@
-|| false/**
+/**
  * 站点统计插件
  */
 module.exports = {
