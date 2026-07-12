@@ -53,7 +53,7 @@ const Slug = props => {
         'password_' + getPasswordStoragePath(router.asPath),
         passInput
       )
-      showNotification(locale.COMMON.ARTICLE_UNLOCK_TIPS) // 设置解锁成功提示显示
+      showNotification('坠入兔子洞') // 设置解锁成功提示显示
       return true
     }
     return false
