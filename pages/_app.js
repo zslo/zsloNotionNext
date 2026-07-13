@@ -13,6 +13,7 @@ import { useRouter } from 'next/router'
 import { useCallback, useEffect, useMemo } from 'react'
 import { getQueryParam } from '../lib/utils'
 import ErrorHandler from '@/lib/utils/errorHandler'
+import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // 各种扩展插件 这个要阻塞引入
@@ -101,6 +102,7 @@ const MyApp = ({ Component, pageProps }) => {
       ) : (
         content
       )}
+      <Analytics />
       <SpeedInsights />
     </>
   )
